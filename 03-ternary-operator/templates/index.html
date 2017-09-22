@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start with Twig (devfuria)</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <h3>Result</h3>
+
+        <p>1. {{ flag ?  'flag is true' : 'flag is false' }}</p>
+        <p>2. {{ flag ?  'flag is true' }}</p>
+        <p>3. {{ flag ?: 'flag is false' }}</p>
+
+        <h3>Explain</h3>
+
+<pre>{% verbatim %}
+1. {{ foo ? 'yes' : 'no' }}
+2. {{ foo ? 'yes' }} is the same as {{ foo ? 'yes' : '' }}
+3. {{ foo ?: 'no' }} is the same as {{ foo ? foo : 'no' }}{% endverbatim %}
+</pre>
+
+    </body>
+</html>
