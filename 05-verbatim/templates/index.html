@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start with Twig (devfuria)</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+
+The <a href="https://twig.symfony.com/doc/2.x/tags/verbatim.html">verbatim tag </a>
+marks sections as being raw text that should not be parsed. For example to put
+Twig syntax as example into a template you can use this snippet:
+
+
+
+<h3>Result</h3>
+
+{% verbatim %}
+
+{{ 1 + 1 }}
+
+{% endverbatim %}
+
+
+
+<h3>Explain</h3>
+
+<pre>
+{% verbatim %}
+{&#37; verbatim &#37;}
+
+{{ 1 + 1 }}
+
+{&#37; endverbatim &#37;}
+{% endverbatim %}
+</pre>
+
+
+    </body>
+</html>
