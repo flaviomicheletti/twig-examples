@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start with Twig (devfuria)</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        {% if flag %}
+            <p>flag is true</p>
+        {% else %}
+            <p>flag is false</p>
+        {% endif %}
+
+        <ul>
+            {% for v in arr %}
+                <li>{{ v }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
