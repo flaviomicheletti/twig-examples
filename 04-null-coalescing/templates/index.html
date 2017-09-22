@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start with Twig (devfuria)</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <h3>Result</h3>
+
+        <p>{{ foo ?? 'foo is not defined' }}</p>
+        <p>{{ bar ?? 'bar is not defined' }}</p>
+
+        <h3>Explain</h3>
+
+<pre>{% verbatim %}
+{# returns the value of foo if it is defined and not null, 'no' otherwise #}
+{{ foo ?? 'no' }}
+{% endverbatim %}</pre>
+
+    </body>
+</html>
