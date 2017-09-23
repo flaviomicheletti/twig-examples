@@ -7,17 +7,15 @@
     </head>
     <body>
 
-<h3>Result</h3>
+        <p>{{ foo|escape }}</p>
 
-{{ '{{' }}
+        <p>{{ foo|e }}</p>
 
+        <p>{{ foo|escape('html') }}</p>
 
-<h3>Explain</h3>
+        <p>{{ foo|e('html') }}</p>
 
-{{ "{{ '{{' }}" }}
+        <pre><code>{{ foo|e }}</code></pre>
 
-
-
-{% autoescape %}
-<p></p>
-{% endautoescape %}
+    </body>
+</html>

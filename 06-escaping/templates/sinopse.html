@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start with Twig (devfuria)</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        https://craftcms.stackexchange.com/questions/215/how-can-i-escape-twig-code-to-prevent-it-from-being-parsed
+
+
+        <p>Escape single lines as strings:</p>
+
+        <p><pre><code>{% verbatim %}{{ '{% set foo = "bar" %}' }}{% endverbatim %}</code></pre></p>
+
+
+        <p>Use autoescape to escape multiple lines, optionally specifying a syntax (see docs):</p>
+
+<pre><code>{% verbatim %}{% autoescape %}
+    {% if foo != "bar" %}
+        {% set foo = "bar" %}
+    {% endif %}
+{% endautoescape %}
+{% endverbatim %}</code></pre>
+
+
+        <p>Use verbatim to treat multiple lines as raw text:</p>
+
+<pre>{% verbatim %}{&#37; verbatim &#37;}
+    {% if foo != "bar" %}
+        {% set foo = "bar" %}
+    {% endif %}
+{&#37; endverbatim &#37;}
+{% endverbatim %}</pre>
+
+    </body>
+</html>

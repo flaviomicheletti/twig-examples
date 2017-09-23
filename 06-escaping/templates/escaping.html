@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start with Twig (devfuria)</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <h3><a href="https://twig.symfony.com/doc/2.x/templates.html#escaping">Escaping</a></h3>
+
+        <p>It is sometimes desirable or even necessary to have Twig ignore parts it would
+        otherwise handle as variables or blocks. For example if the default syntax is
+        used and you want to use &#37;&#37; as raw string in the template and not start a
+        variable you have to use a trick.</p>
+
+        <p>The easiest way is to output the variable delimiter (&#37;&#37;) by using a variable expression:</p>
+
+        <p>{{ "{{ '{{' }}" }}</p>
+
+        <p>..result in:</p>
+
+        <p>{{ '{{' }}</p>
+
+    </body>
+</html>
+
