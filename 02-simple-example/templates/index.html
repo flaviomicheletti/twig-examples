@@ -7,16 +7,24 @@
     </head>
     <body>
 
+        <h3>if-else</h3>
         {% if flag %}
             <p>flag is true</p>
         {% else %}
             <p>flag is false</p>
         {% endif %}
 
+        <h3>array</h3>
         <ul>
             {% for v in arr %}
                 <li>{{ v }}</li>
             {% endfor %}
         </ul>
+
+        <h3>object</h3>
+        <p>foo.bar  = "{{ foo.bar }}"</p>
+        <p>foo.die  = "{{ foo.die }}"</p>
+        <p>foo.lish = "{{ foo.lish }}"</p>
+
     </body>
 </html>

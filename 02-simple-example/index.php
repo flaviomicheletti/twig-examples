@@ -10,16 +10,18 @@ $twig   = new Twig_Environment($loader);
 #
 $flag = (rand(0, 1)) ? true : false;
 $arr  = [rand(1, 10), rand(1, 10), rand(1, 10), rand(1, 10), rand(1, 10)];
-
-
+$foo  = new Foo();
 class Foo {
-    $bar  = 'prop 1';
-    $die  = 'prop 2';
-    $lish = 'prop 3';
+    public $bar  = 'prop 1';
+    public $die  = 'prop 2';
+    public $lish = 'prop 3';
 }
 
-
+#
+# your template
+#
 echo $twig->render('index.html', [
     "flag" => $flag,
-    "arr"  => $arr
+    "arr"  => $arr,
+    "foo"  => $foo
 ]);
