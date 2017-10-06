@@ -1,0 +1,14 @@
+{% extends "_base.html" %}
+
+{% block head %}
+    <title>this is a article: {{ title }}</title>
+    <link rel="stylesheet" href="articles.css" />
+{% endblock %}
+
+{% block body %}
+    <h1>Article name: {{ title }}</h1>
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer">
+        <a href="http://devfuria.com.br/">devfuria.com.br</a>
+    </div>
+{% endblock %}
