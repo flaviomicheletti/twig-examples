@@ -7,15 +7,19 @@
     </head>
     <body>
 
-        <p>{{ foo|escape }}</p>
+        <pre>1. <code>{{ foo|e }}</code></pre>
 
-        <p>{{ foo|e }}</p>
+        <p>2. {{ foo|e }}</p>
 
-        <p>{{ foo|escape('html') }}</p>
+        <p>3. {{ foo|escape }}</p>
 
-        <p>{{ foo|e('html') }}</p>
+        <p>4. {{ foo|escape('html') }}</p>
 
-        <pre><code>{{ foo|e }}</code></pre>
+        <p>5. {{ foo|e('html') }}</p>
+
+        <p>6. {{ foo }}</p>
+
+        <p>7. {{ foo|raw }}</p>
 
     </body>
 </html>
